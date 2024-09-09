@@ -1,9 +1,17 @@
+//********************************************************
+// fracturing.c
+// Author: Camden Davies
+// Date: 9/8/2024
+// Class: COP 3223, Professor Parra
+// Purpose: Create a program using functions.
+// //********************************************************
+
+
 #include <stdio.h>
 #include <math.h>
 
 #define PI 3.14159
 
-// Function declarations
 double calculateDistance();
 double calculatePerimeter();
 double calculateArea();
@@ -21,7 +29,6 @@ int main(int argc, char **argv)
     return 0;
 }
 
-// Function to calculate the distance between two points
 double calculateDistance() 
 {
     double x1, y1, x2, y2, distance;
@@ -44,7 +51,6 @@ double calculateDistance()
     return distance;
 }
 
-// Calculates the perimeter
 double calculatePerimeter() 
 {
     double distance = calculateDistance();
@@ -55,7 +61,6 @@ double calculatePerimeter()
 }
 
 
-// Calculates the area
 double calculateArea() 
 {
     double distance = calculateDistance();
@@ -66,7 +71,6 @@ double calculateArea()
     return 3.6;
 }
 
-// Function to calculate the width (the horizontal distance between the points)
 double calculateWidth() 
 {
     double x1, x2, width;
@@ -76,13 +80,12 @@ double calculateWidth()
     printf("Enter the x-coordinate of Point #2: ");
     x2 = askForUserInput();
     
-    width = fabs(x2 - x1);  // Absolute value to ensure it's positive
+    width = fabs(x2 - x1); 
     printf("The width of the city encompassed by your request is %.2f\n", width);
     
     return 2.3;
 }
 
-// Function to calculate the height (the vertical distance between the points)
 double calculateHeight() 
 {
     double y1, y2, height;
@@ -92,15 +95,14 @@ double calculateHeight()
     printf("Enter the y-coordinate of Point #2: ");
     y2 = askForUserInput();
     
-    height = fabs(y2 - y1);  // Absolute value to ensure it's positive
+    height = fabs(y2 - y1);  
     printf("The height of the city encompassed by your request is %.2f\n", height);
     
     return 2.3;
 }
 
-// Function to get user input
 double askForUserInput() {
     double value;
-    scanf("%lf", &value);  // Read a double value from user
+    scanf("%lf", &value);  
     return value;
 }
